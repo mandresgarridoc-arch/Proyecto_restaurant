@@ -3,6 +3,8 @@ Hola equipo recordatorio para poder trabajar un repositorio compartido.
 1-. Si el repositorio no esta en nuestro pc primero debemos crear una copia del repositorio en nuestro pc, 
 para esto primero debemos ir a la carpeta donde crearemos al copia, ej: C:/ 
 
+Proyecto: Sistema de Gestión Gastronómica "RestoManager"
+Este repositorio contiene el desarrollo del sistema de gestión para un restaurante, realizado como proyecto integrador para la asignatura de Bases de Datos No Estructuradas.
 
 Stack Tecnológico
 Frontend: React, TypeScript, Tailwind CSS.
@@ -13,7 +15,7 @@ Base de Datos: MongoDB (NoSQL) alojado en MongoDB Atlas.
 
 Infraestructura: Despliegue en la nube (Vercel y Render).
 
-Bitácora de Desarrollo (Progreso Actual)
+Bitácora de Desarrollo (Progreso Actual) 30-06-2026
 A continuación, se detalla el progreso del proyecto organizado por hitos técnicos:
 
 Sprint 1: Infraestructura y Base NoSQL
@@ -53,5 +55,5 @@ cd frontend
 npm install
 # Iniciar servidor
 npm run dev
-🔒 Nota de Seguridad
+Nota de Seguridad
 Este proyecto utiliza variables de entorno (.env) para la conexión a la base de datos. Por razones de seguridad, este archivo no está incluido en el repositorio. Asegúrese de configurar sus propias credenciales de MongoDB Atlas en el archivo local para realizar pruebas.
