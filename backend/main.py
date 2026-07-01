@@ -3,3 +3,7 @@
 hola = "Hola, este es el backend de nuestro proyecto"
 
 print(hola)
+
+lista = ["a","b","c"]
+
+print (lista)
