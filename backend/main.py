@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #FastApi framework que crea el servidor, httpException envia errores como error 500 si la base de datos falla
 from fastapi import FastAPI, HTTPException
 
@@ -38,3 +39,5 @@ def crear_plato(plato: dict):
     resultado = db["carta"].insert_one(plato) #envia documento a mongo atlas
     #devuelve un mensaje de confirmacion 
     return {"mensaje": "Plato agregado", "id": str(resultado.inserted_id)}
+
+
