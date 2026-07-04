@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 #FastApi framework que crea el servidor, httpException envia errores como error 500 si la base de datos falla
 from fastapi import FastAPI, HTTPException
 

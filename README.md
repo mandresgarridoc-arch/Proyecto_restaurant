@@ -57,3 +57,27 @@ npm install
 npm run dev
 Nota de Seguridad
 Este proyecto utiliza variables de entorno (.env) para la conexión a la base de datos. Por razones de seguridad, este archivo no está incluido en el repositorio. Asegúrese de configurar sus propias credenciales de MongoDB Atlas en el archivo local para realizar pruebas.
+
+
+Bitácora: Configuración del Backend
+Hemos implementado la base del servidor con FastAPI y configurado la conexión a MongoDB Atlas mediante variables de entorno.
+
+Guía Rápida para el equipo:
+Activar el Entorno Virtual (siempre primero):
+
+Bash
+cd backend
+venv\Scripts\activate
+Probar la API (Local):
+
+Bash
+uvicorn main:app --reload
+Una vez corriendo, abre http://127.0.0.1:8000/docs para verificar los endpoints y probar la conexión con la base de datos de forma interactiva.
+
+Requisito: Asegúrate de tener el archivo .env en la carpeta /backend con tu MONGO_URI.
+(Nota: Este archivo es privado y no se subirá al repositorio por seguridad).
+
+IMPORTANTE RECORDAR:
+Si el comando uvicorn falla: Asegúrate siempre de ver el (venv) al inicio de tu terminal. Si no está, ejecutan el comando de activación nuevamente.
+
+Si hay error de conexión: Revisen que su IP esté autorizada en el panel de Network Access de MongoDB Atlas.
