@@ -1,5 +1,6 @@
 # FastAPI framework crea el servidor, httpException envía errores
 from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel
 from pymongo import MongoClient 
 from dotenv import load_dotenv  # lee archivos secretos .env y carga las credenciales
 from bson import ObjectId       # ayuda a convertir los id de mongo en texto
@@ -18,14 +19,14 @@ MONGO_URI = os.getenv("MONGO_URI")  # trae la dirección del clúster de atlas
 cliente_mongo = MongoClient(MONGO_URI)  # conecta con la nube
 db = cliente_mongo["resto_manager_db"]  # Nombre de la base de datos de SisGes
 
-# 3. Función auxiliar para formatear los documentos de MongoDB a JSON limpio para React
+# Formatea los documentos de MongoDB para que sean legibles por JSON y FastAPI
 def serializar_documento(doc) -> dict:
     if not doc:
         return None
-    # Convertimos el ObjectId de MongoDB a un string normal
+    # convierte el objectid de mongo a una id de texto(str) para que el navegador pueda leerlo
     doc["id"] = str(doc["_id"])
-    del doc["_id"]  # Eliminamos la llave original para no duplicar datos
-    return doc
+    del doc["_id"]  # elimina el campo _id oriiginal para que no se duplique
+    return doc #retorna el documento ya formateado 
 
 
 # ==========================================
