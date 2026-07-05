@@ -3,7 +3,7 @@
 from fastapi import FastAPI, HTTPException
 
 from pymongo import MongoClient 
-from dotenv import load_dotenv #lee archivos secretos .env y carga las contraseñas
+from dotenv import load_dotenv  #lee archivos secretos .env y carga las contraseñas
 from bson import ObjectId #ayuda a convertir los id de mongo en texto para que el navegador lospueda leer
 import os
 

@@ -1,5 +1,12 @@
+#Con esto le digo que ignore los archivos de entorno y la carpeta de cache de python
+.env
+__pycache__/
+
 # Ignorar entornos virtuales
 backend/venv/
 
 # Ignorar archivos secretos
 backend/.env
+
+
+hola 1234 probando gitignore
