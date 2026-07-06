@@ -67,7 +67,7 @@ cd frontend
 # Instalar dependencias
 npm install
 # Iniciar servidor
-npm run dev
+npm run dev\
 Nota de Seguridad
 Este proyecto utiliza variables de entorno (.env) para la conexión a la base de datos. Por razones de seguridad, este archivo no está incluido en el repositorio. Asegúrese de configurar sus propias credenciales de MongoDB Atlas en el archivo local para realizar pruebas.
 

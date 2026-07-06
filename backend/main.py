@@ -15,6 +15,9 @@ from daos.boleta_dao import BoletaDAO
 load_dotenv() 
 #crea el servidor de fastapi
 app = FastAPI(title="SisGes API") 
+@app.get("/", summary="Ruta de inicio")
+def inicio():
+    return {"mensaje": "Ingresa http://127.0.0.1:8000/docs para ver la documentación interactiva."}
 
 # Conexión Global
 MONGO_URI = os.getenv("MONGO_URI") 
