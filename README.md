@@ -1,18 +1,18 @@
-Hola equipo recordatorio para poder trabajar un repositorio compartido.
-
-1-. En cmd ir a direccion donde guardar el pruyecto recomendado en C:\
-2.- Descargar el repositorio para trabajar con 
-**git clone https://github.com/usuario/nombre-del-proyecto.git**
-3.- Ir a la carpeta de repositorio con
-**cd Proyecto_restaurant**
-4.- Para abrir el visual estudio y trabajar ejecutar 
-**code .** 
-5.- Cuando editemos un archivo, primero se debe guardar en visual studio con 
-ctrl+s
-6.- En la terminal cmd para cargar los cambios dentro del repositorio ejecutar
-**git add .**
+Pasos para descargar el repositorio por primera vez y empezar a trabajar
+-
+1-. En cmd ir a direccion donde guardar el proyecto recomendado en C:\ \
+2.- Descargar el repositorio para trabajar con: 
+**git clone https://github.com/usuario/nombre-del-proyecto.git** \
+3.- Ir a la carpeta de repositorio con:
+**cd Proyecto_restaurant**\
+4.- Para abrir el visual estudio y trabajar ejecutar: 
+**code .** \
+5.- Cuando editemos un archivo, primero se debe guardar en visual studio con: 
+**ctrl+s**\
+6.- En la terminal cmd para cargar los cambios dentro del repositorio ejecutar:
+**git add .**\
 7.- Para confirmarlos ejecutar un comit con:
-**git commit -m "Los cambios que realizaste"**
+**git commit -m "Los cambios que realizaste"**\
 8.- Para confirmar los cambios y subirlos al repositorio ejecutar: 
 **git push**
 
