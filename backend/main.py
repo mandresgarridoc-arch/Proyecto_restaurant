@@ -98,5 +98,16 @@ def emitir_boleta(numero_mesa: int):
         return mesero_dao.generar_boleta(numero_mesa)
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/mesero/boletas", summary = "Mesero: Tomar un pedido y abrir mesa")
+def tomar_pedido(pedido: NuevaBoletaDTO):
+    try:
+        resultado = boleta_dao.registrar_nuevo_pedido(pedido)
+        return {
+            "mensaje": "Pedido registrado con exito, mesa ocupada.",
+            "detalle": resultado
+        }
+    except Exception as e:
+        raise HTTPException (status_code=500, detail=str(e))
     
 
