@@ -10,6 +10,6 @@ class ItemPedidoDTO(BaseModel):
     precio_unitario: int
 
 #Definir como viene el pedido desde React
-class NuevBoletaDTO(BaseModel):
+class NuevaBoletaDTO(BaseModel):
     mesa_numero: int
     items:List[ItemPedidoDTO] #La lista de platos que trae el pedido
