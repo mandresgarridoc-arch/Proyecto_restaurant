@@ -6,10 +6,10 @@ import os
 # IMPORTAMOS NUESTROS OBJETOS DESDE LAS OTRAS CARPETAS
 from dtos.menu_dto import PlatoDTO
 from daos.menu_dao import MenuDAO
-
-# 1. NUEVOS IMPORTES PARA EL MESERO
 from dtos.mesero_dto import PedidoDTO, EstadoMesaDTO
 from daos.mesero_dao import MeseroDAO
+from dtos.boleta_dto import NuevaBoletaDTO
+from daos.boleta_dao import BoletaDAO
 
 # con load_dotenv() cargamos las variables de entorno del archivo .env
 load_dotenv() 
@@ -25,8 +25,9 @@ db = cliente_mongo["resto_manager_db"]
 # 2. INSTANCIAS DE LOS DAOs (Les pasamos la base de datos)
 # al instanciar MenuDAO le pasamos la conexion a la base de datos para que pueda usarla en sus metodos
 #el (db) es el parametro que le permite a la clase MenuDAO usar la conexion a la base de datos en sus metodos
-menu_dao = MenuDAO(db)
+menu_dao = MenuDAO(db) # Nueva instancia habilitada
 mesero_dao = MeseroDAO(db) # Nueva instancia habilitada
+boleta_dao = BoletaDAO(db) # Nueva instancia habilitada
 
 
 # RUTAS DE ADMINISTRACIÓN (MENÚ)
@@ -97,3 +98,5 @@ def emitir_boleta(numero_mesa: int):
         return mesero_dao.generar_boleta(numero_mesa)
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+    
+
