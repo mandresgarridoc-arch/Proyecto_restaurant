@@ -81,3 +81,20 @@ IMPORTANTE RECORDAR:
 Si el comando uvicorn falla: Asegúrate siempre de ver el (venv) al inicio de tu terminal. Si no está, ejecutan el comando de activación nuevamente.
 
 Si hay error de conexión: Revisen que su IP esté autorizada en el panel de Network Access de MongoDB Atlas.
+
+
+Bitácora: Implementación del Módulo "Mesero" 05/07/2026
+Se desarrolló toda la lógica operativa para el rol del mesero aplicando el patrón de diseño DAO (Data Access Object) y DTO (Data Transfer Object), logrando separar las rutas de la lógica de la base de datos.
+
+Logros principales en esta actualización:
+Estructura de Datos (DTO): Se crearon los modelos estandarizados en mesero_dto.py utilizando Pydantic para validar los datos de entrada, incluyendo la estructura de los pedidos completos (PedidoDTO) y los platos individuales (ItemPedidoDTO).
+
+Gestión de Mesas: Implementación de funciones para visualizar el estado actual de todas las mesas y actualizar sus estados (disponible, reservada, ocupada) desde la base de datos.
+
+Filtro Inteligente de Menú: Creación de un endpoint que consulta la colección menu y devuelve estrictamente los platos y bebidas que tienen el campo disponible: True.
+
+Automatización de Pedidos: Al ingresar un nuevo pedido (tomar_pedido), el sistema registra la fecha/hora exacta, guarda la comanda y automáticamente cambia el estado de la mesa correspondiente a "ocupada".
+
+Generación de Boletas: Se desarrolló un flujo de cierre (generar_boleta) que realiza tres acciones simultáneas: cambia el estado del pedido a "cerrado", libera la mesa regresándola a "disponible", y emite un comprobante estructurado en JSON con el detalle del consumo y el total a pagar.
+
+Integración en API: Se actualizaron las rutas en main.py, separando de forma limpia los endpoints de administración (/admin/...) de los operativos (/mesero/...).
